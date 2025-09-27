@@ -1,0 +1,76 @@
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0, 0, 0);
+  }
+  .contenedor {
+    perspective: 250px;
+    width: 300px;
+    height: 150px;
+    position: relative;
+  }
+  .tarjeta {
+    width: 50px;
+    height: 100px;
+    background-color: #000000f2;
+    font-size: 40px;
+    position: absolute;
+    top: 35px;
+    left: 150px;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+    animation: Carrusel 8s linear infinite;
+    transition: transform 0.5s ease-in-out; /* Suaviza el movimiento */
+  }
+  @keyframes Carrusel {
+    from {
+      transform: rotateY(360deg) translateZ(100px);
+      z-index: 10;
+      opacity: 0.9;
+    }
+    50% {
+      transform: rotateY(180deg) translateZ(100px); /* Añadí un poco de rotación en Y */
+      z-index: -10;
+    }
+    to {
+      transform: rotateX(0deg) translateZ(100px);
+    }
+  }
+  #BARCA {
+    background-image: url(img/BARCA.png);
+    background-size: cover;
+    animation-delay: -1s;
+  }
+  #CHIVAS {
+    background-image: url(img/CHIVAS.png);
+    background-size: cover;
+    animation-delay: -2s;
+  }
+  #Xolos {
+    background-image: url(img/Xolos.png);
+    background-size: cover;
+    animation-delay: -3s;
+  }
+  #mexico {
+    background-image: url(img/mexico.png);
+    background-size: cover;
+    animation-delay: -4s;
+  }
+  #Milan {
+    background-image: url(img/Milan.png);
+    background-size: cover;
+    animation-delay: -5s;
+  }
+  .tarjeta h3 {
+    color: rgb(4, 4, 4);
+    font-size: 12px; /* Ajustado el tamaño */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', sans-serif;
+    margin-top: 70px;
+    background-color: white;
+  }
+  
+  
+
